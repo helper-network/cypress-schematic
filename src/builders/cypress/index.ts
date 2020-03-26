@@ -90,10 +90,13 @@ function initCypress(
   };
 
   const { watch, headless } = userOptions;
+  const parsedOptions = {
+    config: options,
+    record: options.record,
+    key: options.key
+  };
 
-  return from(
-    cypress[!watch || headless ? "run" : "open"]({ config: options })
-  ).pipe(
+  return from(cypress[!watch || headless ? "run" : "open"](parsedOptions)).pipe(
     map((result: any) => ({ success: !result.totalFailed && !result.failures }))
   );
 }

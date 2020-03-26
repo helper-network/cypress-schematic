@@ -1,5 +1,5 @@
 {
-  "name": "@briebug/cypress-schematic",
+  "name": "@helper-network/cypress-schematic",
   "version": "3.3.0",
   "description": "Add cypress to an Angular CLI project",
   "builders": "src/builders/builders.json",
@@ -52,6 +52,7 @@
     "@angular-devkit/core": "^8.3.15",
     "@angular-devkit/schematics": "^8.3.15",
     "@schematics/angular": "^8.3.23",
+    "np": "^6.2.0",
     "rxjs": "6.4.0"
   },
   "devDependencies": {
